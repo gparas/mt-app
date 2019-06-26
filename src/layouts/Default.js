@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import routes from '../routes';
 
-const DefaultLayout = prop => {
-  const { children } = prop;
+const DefaultLayout = () => {
   return (
     <Router>
       <Link to="/">Home</Link>
