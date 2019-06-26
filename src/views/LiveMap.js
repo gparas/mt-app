@@ -1,7 +1,6 @@
 import React from 'react';
-import DefaultLayout from '../layouts/Default';
 
 const LiveMap = () => {
-  return <DefaultLayout>LiveMap</DefaultLayout>;
+  return <h2>LiveMap</h2>;
 };
 export default LiveMap;

@@ -1,7 +1,6 @@
 import React from 'react';
-import DefaultLayout from '../layouts/Default';
 
 const Explore = () => {
-  return <DefaultLayout>Explore</DefaultLayout>;
+  return <h2>Explore</h2>;
 };
 export default Explore;
