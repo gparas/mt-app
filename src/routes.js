@@ -1,5 +1,11 @@
-import LiveMap from './views/LiveMap';
-import Explore from './views/Explore';
+import {
+  LiveMap,
+  Explore,
+  Vessels,
+  Ports,
+  Stations,
+  Companies,
+} from './views/Demo';
 
 const routes = [
   {
@@ -12,6 +18,28 @@ const routes = [
     path: '/explore',
     name: 'Explore',
     component: Explore,
+    routes: [
+      {
+        path: '/explore/vessels',
+        name: 'Vessels',
+        component: Vessels,
+      },
+      {
+        path: '/explore/ports',
+        name: 'Ports',
+        component: Ports,
+      },
+      {
+        path: '/explore/stations',
+        name: 'Stations',
+        component: Stations,
+      },
+      {
+        path: '/explore/companies',
+        name: 'Companies',
+        component: Companies,
+      },
+    ],
   },
 ];
 

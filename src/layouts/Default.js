@@ -1,22 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import RouteWithSubRoutes from '../components/RouteWithSubRoutes';
 import routes from '../routes';
 
 const DefaultLayout = () => {
   return (
     <Router>
-      <Link to='/'>Home</Link>
-      <Link to='/explore'>Explore</Link>
-      <Switch>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.component}
-          />
-        ))}
-      </Switch>
+      <Navbar routes={routes} />
+      {routes.map((route, i) => (
+        <RouteWithSubRoutes key={i} {...route} />
+      ))}
     </Router>
   );
 };
