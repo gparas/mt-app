@@ -1,5 +1,5 @@
 import React from 'react';
-import { loremIpsum } from 'lorem-ipsum';
+import DummyContent from './components/DummyContent';
 import { Explore, Community } from './views/Demo';
 
 const routes = [
@@ -22,17 +22,7 @@ const routes = [
       {
         path: '/explore/lorem',
         name: 'Lorem',
-        component: () => (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: loremIpsum({
-                count: 4,
-                format: 'html',
-                units: 'paragraphs',
-              }),
-            }}
-          />
-        ),
+        component: DummyContent,
       },
       {
         path: '/explore/ports',
